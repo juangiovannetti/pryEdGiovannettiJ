@@ -20,9 +20,11 @@ namespace pryEdGiovannettiJ
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
+            x.NomArchi = "colores.csv";
             x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
 
-            MessageBox.Show("Datos Grabados!");
+           
             txtNombre.Text = "";
         }
 
